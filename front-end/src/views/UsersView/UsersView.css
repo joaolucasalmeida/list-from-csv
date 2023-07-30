@@ -1,0 +1,41 @@
+.users-view-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.users-view-inputs-container {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.users-view-input-file {
+    display: flex;
+    align-items: center;
+    background-color: #06ad7d;
+    border-radius: 3px;
+    justify-content: center;
+    border: 1px solid #06ad7d;
+    margin-left: 10px;
+    font-weight: bold;
+    color: white;
+    height: 39px;
+    cursor: pointer;
+    font-size: 13px;
+    width: 133px;
+}
+
+.users-view-input-file:hover {
+    filter: brightness(85%);
+}
+
+@media (max-width: 553px) {
+    .users-view-input-file {
+        min-width: 300px;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+}

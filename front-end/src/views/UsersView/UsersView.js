@@ -1,7 +1,9 @@
-import React, { useState } from "react"
+import React, { useCallback, useState } from "react"
 import SearchInput from '../../components/SearchInput/SearchInput';
 import UserService from "../../services/UserService";
 import Card from "../../components/Card/Card";
+import "./UsersView.css"
+import HeaderBar from "../../components/Header/HeaderBar";
 
 const UsersView = () => {
     const [users, setUsers] = useState([]);
@@ -14,13 +16,30 @@ const UsersView = () => {
         setUsers(response.data.content)
     }
 
+    const handleDataChanged = useCallback((data) => {
+        setUsers(data);
+    }, []);
+
     return (
         <div>
-            <input type="file" accept=".csv" onChange={handleFileUpload} />
-            <SearchInput />
-            {users.map((user, index) =>
-                <Card key={index} user={user} />)
-            }
+            <HeaderBar />
+            <div className="users-view-inputs-container">
+                <SearchInput dataChanged={handleDataChanged} />
+                <label className="users-view-input-file">
+                    <input
+                        type="file"
+                        accept=".csv"
+                        onChange={handleFileUpload}
+                        style={{ display: 'none' }}
+                    />
+                    <span>Importar CSV</span>
+                </label>            
+            </div>
+            <div className="users-view-cards-container">
+                {users.map((user, index) =>
+                    <Card key={index} user={user} />)
+                }
+            </div>
         </div>
     )
 }

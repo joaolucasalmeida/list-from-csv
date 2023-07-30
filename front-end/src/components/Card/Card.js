@@ -7,10 +7,10 @@ const Card = (props) => {
         <div className="user-card">
             <CardImage user={props.user}/>
             <div className="user-details">
-                <h2>{props.user.name}</h2>
-                <p>Country: {props.user.country}</p>
-                <p>City: {props.user.city}</p>
-                <p>Favorite Sport: {props.user.favoriteSport}</p>
+                <h2 className='user-card-title'>{props.user.name}</h2>
+                <p className="user-card-description">Country: {props.user.country}</p>
+                <p className="user-card-description">City: {props.user.city}</p>
+                <p className="user-card-description">Sport: {props.user.favorite_sport}</p>
             </div>
         </div>
     );
