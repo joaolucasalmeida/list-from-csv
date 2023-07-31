@@ -1,5 +1,5 @@
-# Shawn and Partners Test
-This is a test for a web developer position at Shawn and Partners company
+# Shaw and Partners Test
+This is a test for a web developer position at Shaw and Partners company
 
 # Stack
 React on front-end, Node.js with Express and Typescript on back-end. SQLite database
