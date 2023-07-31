@@ -21,17 +21,14 @@ export class UserController {
             .on('error', (error) => {
                 return res.status(500).json({ error: 'An error occurred while reading the CSV file.' });
             })
-            .on('end', () => {
-                return res.status(201).json({ message: 'CSV file successfully processed' });
+            .on('end', async() => {
+                const users = await UsersDAO.listAll()
+                return res.status(201).json({ content: users, message: 'CSV file successfully processed' });
             });
     }
 
     async find(req: Request, res: Response) {
         const query: any = req.query.q;
-        if (!query) {
-            return res.status(400).json({ error: 'Missing query parameter q' });
-        }
-
         try {
             const users = await UsersDAO.findByQuery(query)
             if (!users || users.length === 0) {

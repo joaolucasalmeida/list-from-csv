@@ -2,3 +2,4 @@
 /dist
 src/uploads/*
 dev.sqlite3
+test.sqlite3
