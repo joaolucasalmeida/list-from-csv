@@ -23,7 +23,7 @@ function SearchInput({ dataChanged }) {
       <input
         type="text"
         value={query}
-        placeholder="Pesquisar"
+        placeholder="Search"
         className='search-input'
         onChange={(event) => setQuery(event.target.value)}
       />

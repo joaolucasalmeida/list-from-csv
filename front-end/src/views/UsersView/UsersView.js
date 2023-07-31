@@ -32,7 +32,7 @@ const UsersView = () => {
                         onChange={handleFileUpload}
                         style={{ display: 'none' }}
                     />
-                    <span>Importar CSV</span>
+                    <span>Upload CSV</span>
                 </label>            
             </div>
             <div className="users-view-cards-container">

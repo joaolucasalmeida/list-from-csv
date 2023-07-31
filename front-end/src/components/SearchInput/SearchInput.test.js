@@ -11,7 +11,7 @@ const mockDataChanged = jest.fn();
 describe('SearchInput', () => {
   it('renders search input field', () => {
     render(<SearchInput dataChanged={mockDataChanged} />);
-    const inputElement = screen.getByPlaceholderText('Pesquisar');
+    const inputElement = screen.getByPlaceholderText('Search');
     expect(inputElement).toBeInTheDocument();
   });
 
@@ -21,7 +21,7 @@ describe('SearchInput', () => {
 
     render(<SearchInput dataChanged={mockDataChanged} />);
 
-    const inputElement = screen.getByPlaceholderText('Pesquisar');
+    const inputElement = screen.getByPlaceholderText('Search');
 
     await act(async () => {
       fireEvent.change(inputElement, { target: { value: 'John' } });
