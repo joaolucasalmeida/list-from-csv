@@ -6,6 +6,7 @@ import MikeImage from "../../assets/mike.jpg";
 import KarenImage from "../../assets/karen.jpg";
 import TomImage from "../../assets/tom.jpg";
 import EmmaImage from "../../assets/emma.jpg";
+import DefaultImage from "../../assets/default.jpg";
 
 const CardImage = (props) => {
     const userImages = {
@@ -17,11 +18,11 @@ const CardImage = (props) => {
         "Emma Wilson": EmmaImage
     }
 
-    const imgSrc = userImages[props.user.name] || "";
+    const imgSrc = userImages[props.user.name] || null;
 
     return imgSrc ? 
         <img src={imgSrc} alt={props.user.name} />
-        : <div />;
+        : <img src={DefaultImage} alt={"default"} />;
 };
 
 export default CardImage;

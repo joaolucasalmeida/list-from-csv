@@ -9,7 +9,6 @@ describe('CardImage', () => {
         render(<CardImage user={knownUser} />);
         const imgElement = screen.getByAltText(knownUser.name);
         expect(imgElement).toBeInTheDocument();
-        // Check if the src of the img is the right one
         expect(imgElement).toHaveAttribute('src', expect.stringContaining('john'));
     });
 
