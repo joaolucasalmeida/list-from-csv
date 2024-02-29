@@ -1,4 +1,4 @@
-#About 
+# About 
 Load a list in a React from a uploaded csv dataset 
 
 # Stack
