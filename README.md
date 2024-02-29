@@ -1,3 +1,6 @@
+#About 
+Load a list in a React from a uploaded csv dataset 
+
 # Stack
 React on front-end, Node.js with Express and Typescript on back-end. SQLite database
 
